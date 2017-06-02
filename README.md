@@ -16,8 +16,8 @@
 [travis-url]: https://travis-ci.org/zcong1993/egg-lru
 [codecov-image]: https://img.shields.io/codecov/c/github/zcong1993/egg-lru.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/zcong1993/egg-lru?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-lru.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-lru
+[david-image]: https://img.shields.io/david/zcong1993/egg-lru.svg?style=flat-square
+[david-url]: https://david-dm.org/zcong1993/egg-lru
 [snyk-image]: https://snyk.io/test/npm/egg-lru/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/egg-lru
 [download-image]: https://img.shields.io/npm/dm/egg-lru.svg?style=flat-square
