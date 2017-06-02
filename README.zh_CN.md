@@ -1,6 +1,7 @@
 # egg-lru
 
 [![NPM version][npm-image]][npm-url]
+[![CircleCI][circleci-image]][circleci-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
 [![David deps][david-image]][david-url]
@@ -9,10 +10,12 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-lru.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-lru
-[travis-image]: https://img.shields.io/travis/eggjs/egg-lru.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-lru
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-lru.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-lru?branch=master
+[circleci-image]: https://img.shields.io/circleci/project/github/zcong1993/egg-lru.svg?style=flat-square
+[circleci-url]: https://circleci.com/gh/zcong1993/egg-lru
+[travis-image]: https://img.shields.io/travis/zcong1993/egg-lru.svg?style=flat-square
+[travis-url]: https://travis-ci.org/zcong1993/egg-lru
+[codecov-image]: https://img.shields.io/codecov/c/github/zcong1993/egg-lru.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/zcong1993/egg-lru?branch=master
 [david-image]: https://img.shields.io/david/eggjs/egg-lru.svg?style=flat-square
 [david-url]: https://david-dm.org/eggjs/egg-lru
 [snyk-image]: https://snyk.io/test/npm/egg-lru/badge.svg?style=flat-square
