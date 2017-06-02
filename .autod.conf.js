@@ -8,7 +8,11 @@ module.exports = {
     'test',
     'benchmark',
   ],
+  dep: [
+    'lru-cache'
+  ],
   devdep: [
+    'debug',
     'egg',
     'egg-ci',
     'egg-bin',

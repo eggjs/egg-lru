@@ -1,6 +1,7 @@
 # egg-lru
 
 [![NPM version][npm-image]][npm-url]
+[![CircleCI Build Status](https://circleci.com/gh/zcong1993/egg-lru.svg?style=shield)](https://circleci.com/gh/zcong1993/egg-lru)
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
 [![David deps][david-image]][david-url]
@@ -20,9 +21,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-lru.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-lru
 
-<!--
-Description here.
--->
+> egg lru-cache plugin
 
 ## Install
 
@@ -45,14 +44,13 @@ exports.lru = {
 ```js
 // {app_root}/config/config.default.js
 exports.lru = {
+  // all lru cache config available here
+  max: 1000,
+  maxAge: 1000 * 60 * 60, // 60 min cache
 };
 ```
 
 see [config/config.default.js](config/config.default.js) for more detail.
-
-## Example
-
-<!-- example here -->
 
 ## Questions & Suggestions
 

@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/egg-lru
+    docker:
+      - image: circleci/node:8.0.0
+    steps:
+      - checkout
+      - run:
+          name: install yarn
+          command: curl -o- -L https://yarnpkg.com/install.sh | bash
+      - run:
+          name: install-npm-wee
+          command: yarn
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - .node_modules
+      - run:
+          name: test
+          command: yarn ci
+      - run:
+          name: post coverage
+          command: bash <(curl -s https://codecov.io/bash)
+      - store_artifacts:
+          path: test-results.xml
+          prefix: tests
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+      - store_test_results:
+          path: test-results.xml

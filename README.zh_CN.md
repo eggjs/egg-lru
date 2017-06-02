@@ -20,9 +20,7 @@
 [download-image]: https://img.shields.io/npm/dm/egg-lru.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-lru
 
-<!--
-Description here.
--->
+> egg 框架的 lru cache 插件
 
 ## 依赖说明
 
@@ -33,16 +31,6 @@ egg-lru 版本 | egg 1.x
 1.x | 😁
 0.x | ❌
 
-### 依赖的插件
-<!--
-
-如果有依赖其它插件，请在这里特别说明。如
-
-- security
-- multipart
-
--->
-
 ## 开启插件
 
 ```js
@@ -50,6 +38,17 @@ egg-lru 版本 | egg 1.x
 exports.lru = {
   enable: true,
   package: 'egg-lru',
+};
+```
+
+## 配置插件
+
+```js
+// {app_root}/config/config.default.js
+exports.lru = {
+  // all lru cache config available here
+  max: 1000,
+  maxAge: 1000 * 60 * 60, // 60 min cache
 };
 ```
 
