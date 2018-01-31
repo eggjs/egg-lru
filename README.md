@@ -28,25 +28,73 @@
 $ npm i egg-lru --save
 ```
 
-## Usage
+## Configuration
 
 ```js
 // {app_root}/config/plugin.js
 exports.lru = {
-  enable: true,
-  package: 'egg-lru',
+  client: {
+    enable: true,
+    package: 'egg-lru',
+  },
 };
 ```
 
-## Configuration
+see [config/config.default.js](config/config.default.js) for more detail.
+
+### Simple lru instance
 
 ```js
 // {app_root}/config/config.default.js
 exports.lru = {
-  // all lru cache config available here
-  max: 1000,
-  maxAge: 1000 * 60 * 60, // 60 min cache
+  client: {
+    // all lru cache config available here
+    max: 1000,
+    maxAge: 1000 * 60 * 60, // 60 min cache
+  },
+  // load into app, default is open
+  app: true,
+  // load into agent, default is close
+  agent: false,
 };
+```
+
+Usage:
+```js
+// you can access to simple lru instance by using app.lru
+app.lru.set('test', 'aaa') ;
+app.lru.get('test');
+```
+
+### Multiple database instance
+```js
+// {app_root}/config/config.default.js
+exports.lru = {
+  clients: {
+    long: {
+      max: 1000,
+      maxAge: 1000 * 60 * 60, // 60 min cache
+    },
+    moment: {
+      max: 1000,
+      maxAge: 1000, // 1 second cache
+    },
+  },
+  // load into app, default is open
+  app: true,
+  // load into agent, default is close
+  agent: false,
+};
+```
+Usage:
+```js
+const long = app.lru.get('long');
+long.set('test', 'aaa') ;
+long.get('test');
+
+const moment = app.lru.get('moment');
+moment.set('test', 'aaa') ;
+moment.get('test');
 ```
 
 see [config/config.default.js](config/config.default.js) for more detail.

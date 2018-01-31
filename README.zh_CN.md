@@ -43,13 +43,59 @@ exports.lru = {
 
 ## 配置插件
 
+### 单实例
+
 ```js
 // {app_root}/config/config.default.js
 exports.lru = {
-  // all lru cache config available here
-  max: 1000,
-  maxAge: 1000 * 60 * 60, // 60 min cache
+  client: {
+    // all lru cache config available here
+    max: 1000,
+    maxAge: 1000 * 60 * 60, // 60 min cache
+  },
+  // load into app, default is open
+  app: true,
+  // load into agent, default is close
+  agent: false,
 };
+```
+
+Usage:
+```js
+// you can access to simple lru instance by using app.lru
+app.lru.set('test', 'aaa') ;
+app.lru.get('test');
+```
+
+### 多实例
+```js
+// {app_root}/config/config.default.js
+exports.lru = {
+  clients: {
+    long: {
+      max: 1000,
+      maxAge: 1000 * 60 * 60, // 60 min cache
+    },
+    moment: {
+      max: 1000,
+      maxAge: 1000, // 1 second cache
+    },
+  },
+  // load into app, default is open
+  app: true,
+  // load into agent, default is close
+  agent: false,
+};
+```
+Usage:
+```js
+const long = app.lru.get('long');
+long.set('test', 'aaa') ;
+long.get('test');
+
+const moment = app.lru.get('moment');
+moment.set('test', 'aaa') ;
+moment.get('test');
 ```
 
 ## 详细配置
