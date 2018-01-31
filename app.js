@@ -1,5 +1,9 @@
 'use strict';
 
+const LRU = require('lru-cache');
+
 module.exports = app => {
-  console.log('app.config.env =', app.config.env);
+  if (app.config.lru.app) {
+    app.addSingleton('lru', config => new LRU(config));
+  }
 };
