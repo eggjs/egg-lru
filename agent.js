@@ -1,5 +1,9 @@
 'use strict';
 
+const LRU = require('lru-cache');
+
 module.exports = agent => {
-  console.log('agent.config.env =', agent.config.env);
+  if (agent.config.lru.agent) {
+    agent.addSingleton('lru', config => new LRU(config));
+  }
 };

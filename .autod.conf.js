@@ -8,11 +8,8 @@ module.exports = {
     'test',
     'benchmark',
   ],
-  dep: [
-    'lru-cache'
-  ],
+  dep: [],
   devdep: [
-    'debug',
     'egg',
     'egg-ci',
     'egg-bin',
@@ -20,8 +17,6 @@ module.exports = {
     'autod-egg',
     'eslint',
     'eslint-config-egg',
-    'supertest',
-    'webstorm-disable-index',
   ],
   exclude: [
     './test/fixtures',
