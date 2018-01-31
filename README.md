@@ -66,7 +66,7 @@ app.lru.set('test', 'aaa') ;
 app.lru.get('test');
 ```
 
-### Multiple database instance
+### Multiple lru instance
 ```js
 // {app_root}/config/config.default.js
 exports.lru = {
