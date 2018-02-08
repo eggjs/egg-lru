@@ -33,10 +33,8 @@ $ npm i egg-lru --save
 ```js
 // {app_root}/config/plugin.js
 exports.lru = {
-  client: {
-    enable: true,
-    package: 'egg-lru',
-  },
+  enable: true,
+  package: 'egg-lru',
 };
 ```
 
