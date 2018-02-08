@@ -1,6 +1,7 @@
 # egg-lru
 
 [![NPM version][npm-image]][npm-url]
+[![appveyor build status][appveyor-image]][appveyor-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
 [![David deps][david-image]][david-url]
@@ -9,8 +10,10 @@
 
 [npm-image]: https://img.shields.io/npm/v/egg-lru.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-lru
-[travis-image]: https://img.shields.io/travis/zcong1993/egg-lru.svg?style=flat-square
-[travis-url]: https://travis-ci.org/zcong1993/egg-lru
+[appveyor-image]: https://ci.appveyor.com/api/projects/status/1yiixar5v0mhh92d?svg=true
+[appveyor-url]: https://ci.appveyor.com/project/eggjs/egg-lru
+[travis-image]: https://api.travis-ci.org/eggjs/egg-lru.svg?branch=master
+[travis-url]: https://travis-ci.org/eggjs/egg-lru
 [codecov-image]: https://img.shields.io/codecov/c/github/zcong1993/egg-lru.svg?style=flat-square
 [codecov-url]: https://codecov.io/github/zcong1993/egg-lru?branch=master
 [david-image]: https://img.shields.io/david/zcong1993/egg-lru.svg?style=flat-square
