@@ -78,5 +78,35 @@ function t(appName) {
           .expect(204);
       });
     });
+
+    describe('stat', () => {
+      let app;
+      before(() => {
+        app = mm.app({
+          baseDir: `apps/${appName}`,
+        });
+        return app.ready();
+      });
+
+      after(() => app.close());
+      beforeEach(done => {
+        setTimeout(done, 2500);
+      });
+      afterEach(mm.restore);
+
+      it('should work well', () => {
+        return app.httpRequest()
+          .get('/set')
+          .expect(/cache=cache data/)
+          .expect(200);
+      });
+
+      it('should get null after 2 s', () => {
+        return app.httpRequest()
+          .get('/get')
+          .expect('')
+          .expect(204);
+      });
+    });
   });
 }

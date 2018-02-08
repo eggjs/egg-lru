@@ -97,6 +97,13 @@ moment.get('test');
 
 see [config/config.default.js](config/config.default.js) for more detail.
 
+### Statistic
+egg-lru has builtin statistic feature. When enabled, it will write statistic info to the log every `statInterval` millisecond.
+
+```
+[egg-lru] pid: ${process.pid}, name: ${config.name || 'unknown'}, hit: ${stat.hit}, miss: ${stat.miss}, hitRate: ${stat.hitRate}, length: ${stat.length}
+```
+
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/eggjs/egg/issues).

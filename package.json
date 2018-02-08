@@ -40,7 +40,8 @@
     "app",
     "config",
     "agent.js",
-    "app.js"
+    "app.js",
+    "lib"
   ],
   "ci": {
     "version": "8, 9"
