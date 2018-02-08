@@ -4,7 +4,6 @@
 [![appveyor build status][appveyor-image]][appveyor-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][codecov-image]][codecov-url]
-[![David deps][david-image]][david-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 [![npm download][download-image]][download-url]
 
@@ -14,10 +13,8 @@
 [appveyor-url]: https://ci.appveyor.com/project/eggjs/egg-lru
 [travis-image]: https://api.travis-ci.org/eggjs/egg-lru.svg?branch=master
 [travis-url]: https://travis-ci.org/eggjs/egg-lru
-[codecov-image]: https://img.shields.io/codecov/c/github/zcong1993/egg-lru.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/zcong1993/egg-lru?branch=master
-[david-image]: https://img.shields.io/david/zcong1993/egg-lru.svg?style=flat-square
-[david-url]: https://david-dm.org/zcong1993/egg-lru
+[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-lru.svg?style=flat-square
+[codecov-url]: https://codecov.io/github/eggjs/egg-lru?branch=master
 [snyk-image]: https://snyk.io/test/npm/egg-lru/badge.svg?style=flat-square
 [snyk-url]: https://snyk.io/test/npm/egg-lru
 [download-image]: https://img.shields.io/npm/dm/egg-lru.svg?style=flat-square
