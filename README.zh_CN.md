@@ -49,6 +49,7 @@ exports.lru = {
 // {app_root}/config/config.default.js
 exports.lru = {
   client: {
+    // name: 'HTML', name for output stat
     // all lru cache config available here
     max: 1000,
     maxAge: 1000 * 60 * 60, // 60 min cache
@@ -97,6 +98,15 @@ const moment = app.lru.get('moment');
 moment.set('test', 'aaa') ;
 moment.get('test');
 ```
+
+## 状态日志
+使用 LRU 的开发者都应该关注 LRU 的使用情况，egg-lru 内置了统计功能，每隔 `statInterval` 的时间就会向日志中写入如
+
+```
+[egg-lru] pid: ${process.pid}, name: ${config.name || 'unknown'}, hit: ${stat.hit}, miss: ${stat.miss}, hitRate: ${stat.hitRate}, length: ${stat.length}
+```
+
+格式的统计信息
 
 ## 详细配置
 
